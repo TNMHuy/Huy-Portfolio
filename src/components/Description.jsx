@@ -12,6 +12,8 @@ return (
         {
             data.map((project,i)=>{
                 const {title,description} = project;
+               
+
                 return(
                     <div
                         key={i}

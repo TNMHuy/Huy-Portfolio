@@ -6,6 +6,7 @@ import {motion} from 'framer-motion'
 
 
 export default function Titles({data,setSelectedProject}){
+    
     return(
         <div className='w-full' style={{borderTop:'1px solid rgba(183, 171, 152, 0.25)'}}>
             {
@@ -33,9 +34,13 @@ function Title ({data,setSelectedProject}){
             borderTop:'1px solid rgba(183, 171, 152, 0.25)'
         }} className='relative z-[2]'>
             <div className='inline-block pl-[10%]'
-            onMouseOver={()=>{
+            onMouseLeave={()=>{
+                setSelectedProject(null)
+            }}
+            onMouseEnter={()=>{
                 setSelectedProject(i)
                 mouse.setSize(40)
+                
             }}>
             <motion.p style={{clipPath:clip}} className='inline-block text-[#b7ab98] uppercase text-[8vw] font-bold leading-[7.5vw] m-0 relative z-[2]'>
                 {title}

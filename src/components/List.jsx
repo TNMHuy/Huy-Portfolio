@@ -37,7 +37,7 @@ const List = () => {
 ]
   const [selectedProject,setSelectedProject] = useState(null)
   return (
-    <div className='w-full absolute z-[1]'>
+    <div className='w-full absolute z-[1] bg-[#141212]'>
       <Titles data ={data} setSelectedProject={setSelectedProject}/>
       <Description data ={data} selectedProject={selectedProject}/>
     </div>

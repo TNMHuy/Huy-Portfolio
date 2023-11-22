@@ -1,10 +1,49 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import MouseContext from './utills/mouseContext'
 import faker from "../assets/faker.webp"
 import triangle from "../assets/triangle.svg"
+import SubContact from './SubContact'
 
 const Contact = () => {
-  
+  const data = [
+    {
+        title: "Dribbble ",
+        description: "Fake work",
+       
+    },
+    {
+        title: "Youtube",
+        description: "Random tutorials",
+      
+    },
+    {
+        title: "Linkedin",
+        description: "Serious me",
+       
+    },
+    
+]
+  const data2 = [
+    {
+        title: "Instagram ",
+        description: "Not Tiktok",
+       
+    },
+    {
+        title: "Facebook",
+        description: "Mostly dog stories",
+      
+    },
+    {
+        title: "Behance",
+        description: "The Jurassic Park",
+       
+    },
+    
+]
+const [selectedContact,setSelectedContact] = useState(null)
+const [selectedContact2,setSelectedContact2] = useState(null)
+
     const mouse = useContext(MouseContext)
   return (
     <div className=' my-40  ' id='contact' >
@@ -25,27 +64,12 @@ const Contact = () => {
           </div>
           <div className='flex justify-between'>
           <ul className='flex flex-col '>
-            <li className='flex text-[44px] font-bold gap-4'>
-              <img src={triangle} alt="" />
-              Dribbble</li>
-            <li className='flex text-[44px] font-bold gap-4'>
-              <img src={triangle} alt="" />
-              Youtube</li>
-            <li className='flex text-[44px] font-bold gap-4'>
-              <img src={triangle} alt="" />
-              Dribbble</li>
+            <SubContact data ={data} setSelectedContact={setSelectedContact} selectedContact={selectedContact}/>
             
           </ul>
           <ul>
-          <li className='flex text-[44px] font-bold gap-4'>
-              <img src={triangle} alt="" />
-              Instagram</li>
-          <li className='flex text-[44px] font-bold gap-4'>
-              <img src={triangle} alt="" />
-              Facebook</li>
-          <li className='flex text-[44px] font-bold gap-4'>
-              <img src={triangle} alt="" />
-              Behance</li>
+          <SubContact data ={data2} setSelectedContact={setSelectedContact2} selectedContact={selectedContact2}/>
+
           </ul>
          <div className='flex flex-col justify-around'>
           <div>
