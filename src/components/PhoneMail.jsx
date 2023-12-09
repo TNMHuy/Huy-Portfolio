@@ -4,7 +4,7 @@ import MouseContext from './utills/mouseContext';
 import triangle from "../assets/triangle.svg"
 
 
-export default function SubContact({data,setSelectedContact,selectedContact}){
+export default function PhoneMail({data,setSelectedContact,selectedContact}){
     return(
         <div className='w-full'>
             {
@@ -17,19 +17,14 @@ export default function SubContact({data,setSelectedContact,selectedContact}){
 }
 
 function Title ({data,setSelectedContact,selectedContact}){
-    const {title,index,description} = data;
+    const {title,index,description,text} = data;
     const container = useRef(null);
     const mouse = useContext(MouseContext)
     return(
-        <div ref={container} className='relative z-[4] flex text-[44px] font-bold gap-4'
+        <div ref={container} className='relative z-[4]  font-bold gap-4'
        >
-            <div className=' flex px-[10%] gap-4 ' 
-            
-                 key={index}        
-               >
-              <img src={triangle} alt="" className='' />
-
-            <div className=''
+            <div className=' flex px-[10%]' key={index}  >
+            <div 
                  onMouseLeave={()=>{
                     setSelectedContact(null)
                 }}
@@ -38,17 +33,21 @@ function Title ({data,setSelectedContact,selectedContact}){
                     mouse.setSize(40)     
                 }}
             >
-                <div  className='absolute w-[400px] text-[#000] flex bg-[#ec4e39] font-bold  m-0  z-[2]'
+                <div  className='absolute w-[400px] p-2 text-lg text-[#000]  bg-[#ec4e39] font-bold  m-0  z-[2]'
                  style={{clipPath:selectedContact == index ?"inset(0% 0 0%)":"inset(50% 0 50%)", transition:'clip-path .4s'}}
 
           >
-                {description}
+                <p>{text}</p>
+            <p className=''>{description}</p>
             </div>
-            <div  className=' text-[#b7ab98]   font-bold  m-0 relative z-[-10]'
+            <div  className=' font-bold text-xl p-2  m-0 relative z-[-10]'
                  style={{clipPath:selectedContact == index ?"inset(-50% 0 -50%)":"inset(0 0 0)", transition:'clip-path .4s'}}
 
             >
-                {title}
+                <div>
+            <p>{title}</p>
+            <p className='text-[#B8AC9980]'>{description}</p>
+          </div>
             </div>
             </div>
 

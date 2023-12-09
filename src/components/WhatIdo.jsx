@@ -2,46 +2,44 @@ import React, { useState } from 'react'
 import Titles from './Titles'
 import Description from './Description'
 
-const List = () => {
+const WhatIdo = () => {
   const data = [
     {
-        title: "Ford",
+        title: "HTML",
         description: "Working on the Next-Generation HMI Experience without no driving experience.",
         speed: 0.5
     },
     {
-        title: "UFC",
+        title: "CSS",
         description: "Developed the Future of UFC Sports Ecosystem despite not being a sports fan.",
         speed: 0.5
     },
     {
-        title: "Lincoln",
+        title: "REACTJS",
         description: "Defined the visual concept and design language for the Lincoln Zephyr 2022 but never seen it in real life.",
         speed: 0.67
     },
+    
     {
-        title: "Royal Caribbean",
-        description: "I was just one person on a massive team that created an entire Royal Caribbean eco-system.",
-        speed: 0.8
-    },
-    {
-        title: "Sleepiq",
+        title: "responsive",
         description: "Designed a 1M+ users product utilizing my best personal experience: sleeping.",
         speed: 0.8
     },
-    {
-        title: "NFL",
-        description: "Explored the Future of Fantasy Football while being in a country where football means a total different sport.",
-        speed: 0.8
-    }
+    
 ]
   const [selectedProject,setSelectedProject] = useState(null)
   return (
-    <div className='w-full absolute z-[1] '>
+    <div id='work'>
+        <div className='uppercase text-[16px] mx-[200px] text-[#B7AB98]  font-bold leading-[28px] tracking-[0.5rem] pb-10'>
+          what i do
+          </div>
+        <section className='h-[30vw] relative flex flex-col justify-center items-center bg-transparent' id='project'>
       <Titles data ={data} setSelectedProject={setSelectedProject}/>
       <Description data ={data} selectedProject={selectedProject}/>
+    </section>
     </div>
+    
   )
 }
 
-export default List
+export default WhatIdo

@@ -22,7 +22,7 @@ return (
                     >
                         <p
                             style={{
-                                color:'#010101',
+                                color:'grey',
                                 textTransform: 'uppercase',
                                 fontWeight: 700,
                                 fontSize: '8vw',

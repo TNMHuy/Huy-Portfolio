@@ -3,15 +3,15 @@ import TextSlide from './common/TextSlide'
 const routes = [
   {
     page: 'about',
-    href:'#about'
+    
   },
   {
     page: 'work',
-    href:'#project'
+   
   },
   {
     page: 'contact',
-    href:'#contact'
+    
   },
 
 ]
@@ -24,9 +24,12 @@ const Nav = () => {
               routes.map((item,index)=>{
               
                 return (
-                  <li className='py-[0.375rem] text-[#B7AB98] cursor-pointer ' onClick={()=>setSection(item.page)} >
-                    <TextSlide text={item.page} href={item.href} currentSection={currentSection} />
+                  <li className='py-[0.375rem] text-[#B7AB98] cursor-pointer '  >
+                    <TextSlide text={item.page}  currentSection={currentSection} setSection={setSection} />
                   </li>
+                  // <li className='py-[0.375rem] text-[#B7AB98] cursor-pointer ' onClick={()=>setSection(item.page)} >
+                  //   <TextSlide text={item.page}  currentSection={currentSection} />
+                  // </li>
                 )
               })
             }

@@ -1,8 +1,7 @@
 import React, { useContext, useState } from 'react'
 import MouseContext from './utills/mouseContext'
-import faker from "../assets/faker.webp"
-import triangle from "../assets/triangle.svg"
 import SubContact from './SubContact'
+import PhoneMail from './PhoneMail'
 
 const Contact = () => {
   const data = [
@@ -35,14 +34,29 @@ const Contact = () => {
       
     },
     {
-        title: "Behance",
-        description: "The Jurassic Park",
+        title: "Github",
+        description: " My storage ",
        
     },
-    
+]
+  const data3 = [
+    {
+        title: "Email ",
+        description: "mhuy2898@gmail.com",
+        text:'100% chance i read it'
+       
+    },
+    {
+        title: "Phone",
+        description: "+84 905 914 397",
+        text:`5% chance i don't pick up`
+      
+    },
+   
 ]
 const [selectedContact,setSelectedContact] = useState(null)
 const [selectedContact2,setSelectedContact2] = useState(null)
+const [selectedContact3,setSelectedContact3] = useState(null)
 
     const mouse = useContext(MouseContext)
   return (
@@ -52,10 +66,10 @@ const [selectedContact2,setSelectedContact2] = useState(null)
                  my motto
             </p>
             <p className='w-[1000px] text-[8rem] flex p-10 uppercase ' onMouseEnter={()=>mouse.setSize(400)} onMouseLeave={()=>mouse.setSize(40)}>
-                  "all roads lead to me"
+                  "Writing Code, Shaping Tomorrow"
             </p>
 
-            <p>-Lee Sang Hyeok-</p>
+            <p>-Developers-</p>
             {/* <img src={faker} alt="" className='border border-black rounded-full w-[50px] h-[52px] '/> */}
         </div>
         <div className='  text-cent text-[#b7ab98] font-bold mx-80 mt-96'>
@@ -72,14 +86,8 @@ const [selectedContact2,setSelectedContact2] = useState(null)
 
           </ul>
          <div className='flex flex-col justify-around'>
-          <div>
-            <p>Email</p>
-            <p className='text-[#B8AC9980]'>mhuy2898@gmail.com</p>
-          </div>
-          <div>
-            <p>Phone</p>
-            <p className='text-[#B8AC9980]'>+84 905 914 397</p>
-          </div>
+         <PhoneMail data ={data3} setSelectedContact={setSelectedContact3} selectedContact={selectedContact3}/>
+
          </div>
           </div>
         </div>

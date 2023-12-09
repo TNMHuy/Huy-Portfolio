@@ -23,7 +23,7 @@ function Title ({data,setSelectedProject}){
     const container = useRef(null);
     const {scrollYProgress} = useScroll({
         target: container,
-        offset: ['start end',`${25/ speed}vw end`]
+        offset: ['start end',`${20/ speed}vw end`]
 
     })
     const clipProgress = useTransform(scrollYProgress,[0, 1 ], [100, 0]);
@@ -40,6 +40,7 @@ function Title ({data,setSelectedProject}){
             onMouseEnter={()=>{
                 setSelectedProject(i)
                 mouse.setSize(40)
+                console.log(i);
                 
             }}>
             <motion.p style={{clipPath:clip}} className='inline-block text-[#b7ab98] uppercase text-[8vw] font-bold leading-[7.5vw] m-0 relative z-[2]'>

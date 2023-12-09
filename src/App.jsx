@@ -8,6 +8,9 @@ import About from './components/About'
 import Project from './components/Project'
 import Contact from './components/Contact'
 import Header from './components/Header'
+import AboutMe from './components/AboutMe'
+import WhatIdo from './components/WhatIdo'
+import Experience from './components/Experience'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +19,9 @@ function App() {
    <>
    <Header/>
    <About/>
+   <AboutMe/>
+   <WhatIdo/>
+   <Experience/>
    <Project/>
    <Contact/>
    <Footer/>
