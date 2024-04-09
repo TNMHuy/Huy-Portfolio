@@ -24,7 +24,7 @@ const Nav = () => {
               routes.map((item,index)=>{
               
                 return (
-                  <li className='py-[0.375rem] text-[#B7AB98] cursor-pointer '  >
+                  <li key={index} className='py-[0.375rem] text-[#B7AB98] cursor-pointer '  >
                     <TextSlide text={item.page}  currentSection={currentSection} setSection={setSection} />
                   </li>
                   // <li className='py-[0.375rem] text-[#B7AB98] cursor-pointer ' onClick={()=>setSection(item.page)} >
