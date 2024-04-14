@@ -20,7 +20,7 @@ const Earth = () => {
         img3
     ])
   return (
-    <Canvas  ref={scene} className=''>
+    <Canvas  ref={scene} >  
         <ambientLight intensity={0.6}/>
         <directionalLight intensity={3.5} position={[1,0,-.25]} />
         <motion.mesh scale={2.5} rotation-y={scrollYProgress} >

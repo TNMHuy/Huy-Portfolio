@@ -5,39 +5,44 @@ import Description from './Description'
 const List = () => {
   const data = [
     {
-        title: "Ford",
+        title: "Fashion game",
         description: "Working on the Next-Generation HMI Experience without no driving experience.",
-        speed: 0.5
+        speed: 0.5,
+        link:''
     },
     {
-        title: "UFC",
+        title: "Todo list",
         description: "Developed the Future of UFC Sports Ecosystem despite not being a sports fan.",
-        speed: 0.5
+        speed: 0.5,
+        link:''
+
     },
     {
-        title: "Lincoln",
-        description: "Defined the visual concept and design language for the Lincoln Zephyr 2022 but never seen it in real life.",
-        speed: 0.67
+        title: "Nike",
+        description: "Defined the visual conc",
+        speed: 0.67,
+        link:'https://nike-project-blush.vercel.app/'
+
     },
     {
-        title: "Royal Caribbean",
-        description: "I was just one person on a massive team that created an entire Royal Caribbean eco-system.",
-        speed: 0.8
+        title: "Blog",
+        description: "I was just one person on a",
+        speed: 0.8,
+        link:'https://figma01-beta.vercel.app/'
+
     },
     {
-        title: "Sleepiq",
-        description: "Designed a 1M+ users product utilizing my best personal experience: sleeping.",
-        speed: 0.8
+        title: "Ecommerce",
+        description: "Designed a 1M+ users.",
+        speed: 0.8,
+        link:'https://ecommerce-ver2.vercel.app/'
+
     },
-    {
-        title: "NFL",
-        description: "Explored the Future of Fantasy Football while being in a country where football means a total different sport.",
-        speed: 0.8
-    }
+    
 ]
   const [selectedProject,setSelectedProject] = useState(null)
   return (
-    <div className='w-full absolute z-[1] '>
+    <div className='w-full absolute z-[1]  '>
       <Titles data ={data} setSelectedProject={setSelectedProject}/>
       <Description data ={data} selectedProject={selectedProject}/>
     </div>

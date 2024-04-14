@@ -9,11 +9,8 @@ const Header = () => {
         <div className='flex justify-between items-center  mx-16 my-10'>
           <Magnetic>
             <Logo/>
-
           </Magnetic>
         <Nav/>
-
-
         </div>
         
     </div>

@@ -34,17 +34,17 @@ const SoundButton = () => {
       <div className='-rotate-90 h-[30px] overflow-hidden  relative'  >
         <audio src={audio1} ref={audio} />
         <div 
-        style={music?{top:'-100%'}:{top:'0'}}
-        className='absolute text-[#B7AB98] text-lg uppercase cursor-pointer font-bold transition-all duration-500' 
-        
-          >on
-          </div>
+          style={music?{top:'-100%'}:{top:'0'}}
+          className='absolute text-[#B7AB98] text-lg uppercase cursor-pointer font-bold transition-all duration-500' 
+          
+            >on
+        </div>
         <div 
-        style={music?{top:'0'}:{top:'100%'}}
-        className='absolute text-[#B7AB98] text-lg uppercase cursor-pointer font-bold transition-all duration-500' 
-     
-          >off
-          </div>
+          style={music?{top:'0'}:{top:'100%'}}
+          className='absolute text-[#B7AB98] text-lg uppercase cursor-pointer font-bold transition-all duration-500' 
+      
+            >off
+        </div>
       </div>
       <div className=' text-[#B8AC9980] text-lg uppercase -rotate-90 hover:text-[#B7AB98] cursor-pointer font-bold'
         >sound
